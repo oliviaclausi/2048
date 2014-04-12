@@ -35,18 +35,18 @@ KeyboardInputManager.prototype.listen = function () {
   var self = this;
 
   var map = {
-    38: 0, // Up
-    39: 1, // Right
-    40: 2, // Down
-    37: 3, // Left
-    75: 0, // Vim up
-    76: 1, // Vim right
-    74: 2, // Vim down
-    72: 3, // Vim left
-    87: 0, // W
-    68: 1, // D
-    83: 2, // S
-    65: 3  // A
+    38: (Math.floor(Math.random()*4)), // Up
+    39: (Math.floor(Math.random()*4)), // Right
+    40: (Math.floor(Math.random()*4)), // Down
+    37: (Math.floor(Math.random()*4)), // Left
+    75: (Math.floor(Math.random()*4)), // Vim up
+    76: (Math.floor(Math.random()*4)), // Vim right
+    74: (Math.floor(Math.random()*4)), // Vim down
+    72: (Math.floor(Math.random()*4)), // Vim left
+    87: (Math.floor(Math.random()*4)), // W
+    68: (Math.floor(Math.random()*4)), // D
+    83: (Math.floor(Math.random()*4)), // S
+    65: (Math.floor(Math.random()*4))  // A
   };
 
   // Respond to direction keys
