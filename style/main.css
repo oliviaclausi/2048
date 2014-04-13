@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: url('../tile-sets/a_lazy_charizard.jpg');
-  color: #354b59;
+  color: #000000;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-family: "Whitney SSm A","Whitney SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px; }
@@ -97,7 +97,7 @@ h1.title {
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #0c92bf;
+  background: #000000;
   padding: 15px 25px;
   font-size: 25px;
   height: 25px;
@@ -210,7 +210,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #1e6477;
+  background: #000000;
   border-radius: 6px;
   width: 500px;
   height: 500px;
