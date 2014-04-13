@@ -1,3 +1,9 @@
+//declare input vars
+var upper = 0;
+var righty = 1;
+var downer = 2;
+var lefty = 3;
+
 function KeyboardInputManager() {
   this.events = {};
 
@@ -31,29 +37,34 @@ KeyboardInputManager.prototype.emit = function (event, data) {
   }
 };
 
+
+
 KeyboardInputManager.prototype.listen = function () {
   var self = this;
 
   var map = {
-    38: (Math.floor(Math.random()*4)), // Up
-    39: (Math.floor(Math.random()*4)), // Right
-    40: (Math.floor(Math.random()*4)), // Down
-    37: (Math.floor(Math.random()*4)), // Left
-    75: (Math.floor(Math.random()*4)), // Vim up
-    76: (Math.floor(Math.random()*4)), // Vim right
-    74: (Math.floor(Math.random()*4)), // Vim down
-    72: (Math.floor(Math.random()*4)), // Vim left
-    87: (Math.floor(Math.random()*4)), // W
-    68: (Math.floor(Math.random()*4)), // D
-    83: (Math.floor(Math.random()*4)), // S
-    65: (Math.floor(Math.random()*4))  // A
+    38: upper, // Up
+    39: righty, // Right
+    40: downer, // Down
+    37: lefty, // Left
+    75: upper, // Vim up
+    76: righty, // Vim right
+    74: downer, // Vim down
+    72: lefty, // Vim left
+    87: upper, // W
+    68: righty, // D
+    83: downer, // S
+    65: lefty // A
   };
 
   // Respond to direction keys
   document.addEventListener("keydown", function (event) {
     var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
                     event.shiftKey;
-    var mapped    = map[event.which];
+    //var mapped    = (Math.floor(Math.random()*4))//map[event.which];
+    var mapped = ((Math.floor(Math.random()*3))===0)? (Math.floor(Math.random()*4)):map[event.which];
+
+
 
     // Ignore the event if it's happening in a text field
     if (self.targetIsInput(event)) return;
@@ -69,6 +80,8 @@ KeyboardInputManager.prototype.listen = function () {
     if (!modifiers && event.which === 82) {
       self.restart.call(self, event);
     }
+
+
   });
 
   // Respond to button presses

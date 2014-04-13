@@ -3,7 +3,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #9cc2d2;
+  background: url('../tile-sets/a_lazy_charizard.jpg');
   color: #354b59;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-family: "Whitney SSm A","Whitney SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -60,7 +60,7 @@ input {
   clear: both; }
 
 h1.title {
-  font-size: 55px;
+  font-size: 35px;
   font-weight: medium;
   margin: 0;
   display: block;
